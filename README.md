@@ -57,6 +57,8 @@ for indice in "${!paquetes[@]}"; do
             ;;
         status | s)
             paquete_instalado "$paquete"
+                echo "status del $paquete"
+                sudo systemctl status "$paquete"
             ;;
         *)
             echo "Operación desconocida para el paquete $paquete: $accion"
